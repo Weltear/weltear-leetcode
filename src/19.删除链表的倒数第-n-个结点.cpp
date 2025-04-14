@@ -24,7 +24,7 @@ public:
         ListNode *slow = new ListNode(-1, head);
 
         // 倒数第 n 个节点，即慢指针相对快指针慢 n - 1 个节点，使用哑节点
-        for (int i = 0; i < n; ++i) fast = fast->next;
+        for (int i = 0; i < n - 1; ++i) fast = fast->next;
 
         // 两者同时步进，直至快节点到达尾节点
         while (fast->next) {
