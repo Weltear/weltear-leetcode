@@ -28,8 +28,7 @@ public:
         else if (left && right) {
             if (left->val == right->val) {
                 // 当左右子树递归均相等
-                if (helper(left->left, right->right) && helper(left->right, right->left)) return true;
-                else return false;
+                return helper(left->left, right->right) && helper(left->right, right->left);
             } else return false;
         }
         // 否则，根本不对称
